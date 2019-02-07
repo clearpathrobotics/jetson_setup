@@ -7,35 +7,19 @@ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C
 ############## ADD CP SOURCE ##############
 wget https://packages.clearpathrobotics.com/public.key -O - | sudo apt-key add -
 sudo sh -c 'echo "deb https://packages.clearpathrobotics.com/stable/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/clearpath-latest.list'
-sudo apt-get install apt-transport-https
+sudo apt-get install -y apt-transport-https
 
 ############## UPDATE ##############
 sudo apt-get update
 
 ############## ROS ##############
-sudo apt-get install ros-kinetic-desktop-full
+sudo apt-get install -y ros-kinetic-desktop-full
 
 ############## SETUP ROS ENVIRONMENT ##############
 sudo mkdir -p /etc/ros
 
-cat <<EOF >> /etc/profile.d/clearpath-ros-environment.sh
-source /etc/ros/setup.bash
-EOF
-
-cat <<EOF > /etc/ros/setup.bash
-# Mark location of self so that robot_upstart knows where to find the setup file.
-export ROBOT_SETUP=/etc/ros/setup.bash
-
-# Setup robot upstart jobs to use the IP from the network bridge.
-# export ROBOT_NETWORK=br0
-
-# Insert extra platform-level environment variables here. The six hashes below are a marker
-# for scripts to insert to this file.
-######
-
-# Pass through to the main ROS workspace of the system.
-source /opt/ros/kinetic/setup.bash
-EOF
+sudo wget -O /etc/profile.d/clearpath-ros-environment.sh http://gitlab/research/jetson_setup/raw/master/files/clearpath-ros-environment.sh
+sudo wget -O /etc/ros/setup.bash http://gitlab/research/jetson_setup/raw/master/files/setup.bash
 
 ############## UDEV AND CONVENIENCE ##############
 wget -O /home/nvidia/.screenrc http://gitlab/research/clearpath_iso/raw/master/clearpath/files/skel/.screenrc
@@ -56,5 +40,6 @@ cd ds4drv
 dpkg-buildpackage -uc -us
 cd ..
 sudo dpkg -i python-ds4drv*
+sudo apt-get -f -y install
 cd ~
 rm -rf ds4
