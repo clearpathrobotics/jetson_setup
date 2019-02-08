@@ -13,7 +13,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 
 ############## ROS ##############
-sudo apt-get install -y ros-kinetic-desktop-full
+sudo apt-get install -y ros-kinetic-desktop
 sudo apt-get install -y ros-kinetic-husky*
 sudo apt-get install -y ros-kinetic-jackal*
 
