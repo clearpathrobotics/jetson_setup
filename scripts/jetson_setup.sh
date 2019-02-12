@@ -33,12 +33,6 @@ sudo wget -O /etc/udev/rules.d/41-hokuyo.rules http://gitlab/research/jetson_set
 sudo wget -O /etc/udev/rules.d/52-ftdi.rules http://gitlab/research/jetson_setup/raw/master/files/52-ftdi.rules
 sudo wget -O /etc/udev/rules.d/60-startech.rules http://gitlab/research/jetson_setup/raw/master/files/60-startech.rules
 
-sudo rm -rf /etc/ros/kinetic/ros.d/
-sudo rm /etc/systemd/system/multi-user.target.wants/ros.service
-sudo rm /lib/systemd/system/ros.service
-sudo rm /usr/sbin/ros-start
-sudo rm /usr/sbin/ros-stop
-
 cd ~
 wget http://gitlab/research/jetson_setup/raw/master/files/HUSKY_SETUP.sh
 wget http://gitlab/research/jetson_setup/raw/master/files/JACKAL_SETUP.sh
