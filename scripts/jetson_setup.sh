@@ -20,22 +20,22 @@ sudo apt-get install -y ros-kinetic-jackal*
 ############## SETUP ROS ENVIRONMENT ##############
 sudo mkdir -p /etc/ros
 
-sudo wget -O /etc/profile.d/clearpath-ros-environment.sh http://gitlab/research/jetson_setup/raw/master/files/clearpath-ros-environment.sh
-sudo wget -O /etc/ros/setup.bash http://gitlab/research/jetson_setup/raw/master/files/setup.bash
+sudo wget -O /etc/profile.d/clearpath-ros-environment.sh https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/clearpath-ros-environment.sh
+sudo wget -O /etc/ros/setup.bash https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/setup.bash
 
 ############## UDEV AND CONVENIENCE ##############
-wget -O /home/nvidia/.screenrc http://gitlab/research/jetson_setup/raw/master/files/.screenrc
-wget -O /home/nvidia/.vimrc http://gitlab/research/jetson_setup/raw/master/files/.vimrc
+wget -O /home/nvidia/.screenrc https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/.screenrc
+wget -O /home/nvidia/.vimrc https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/.vimrc
 
-sudo wget -O /etc/udev/rules.d/10-microstrain.rules http://gitlab/research/jetson_setup/raw/master/files/10-microstrain.rules
-sudo wget -O /etc/udev/rules.d/41-clearpath.rules http://gitlab/research/jetson_setup/raw/master/files/41-clearpath.rules
-sudo wget -O /etc/udev/rules.d/41-hokuyo.rules http://gitlab/research/jetson_setup/raw/master/files/41-hokuyo.rules
-sudo wget -O /etc/udev/rules.d/52-ftdi.rules http://gitlab/research/jetson_setup/raw/master/files/52-ftdi.rules
-sudo wget -O /etc/udev/rules.d/60-startech.rules http://gitlab/research/jetson_setup/raw/master/files/60-startech.rules
+sudo wget -O /etc/udev/rules.d/10-microstrain.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/10-microstrain.rules
+sudo wget -O /etc/udev/rules.d/41-clearpath.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/41-clearpath.rules
+sudo wget -O /etc/udev/rules.d/41-hokuyo.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/41-hokuyo.rules
+sudo wget -O /etc/udev/rules.d/52-ftdi.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/52-ftdi.rules
+sudo wget -O /etc/udev/rules.d/60-startech.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/60-startech.rules
 
 cd ~
-wget http://gitlab/research/jetson_setup/raw/master/files/HUSKY_SETUP.sh
-wget http://gitlab/research/jetson_setup/raw/master/files/JACKAL_SETUP.sh
+wget https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/HUSKY_SETUP.sh
+wget https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/JACKAL_SETUP.sh
 
 ############## DS4 ##############
 mkdir ~/ds4
