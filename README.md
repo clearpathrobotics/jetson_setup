@@ -2,7 +2,7 @@
 Simple script that makes all clearpath specific changes to a vanilla Jetson TX2 to make it operate like our robot standard images.  Makes it work as a standard computer for Husky or Jackal.
 
 ## Usage
-```bash scrips/jetson_setup.sh```
+```bash scripts/jetson_setup.sh```
 
 ## What it Does
 * Add ROS sources and key
