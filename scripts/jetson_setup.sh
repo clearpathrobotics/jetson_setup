@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
 ############## INSTALL UPDATES + USEFUL ADDITIONAL PACKAGES ##############
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse
+sudo add-apt-repository restricted
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
@@ -22,6 +25,9 @@ sudo apt-get update
 sudo apt-get install -y ros-kinetic-desktop
 sudo apt-get install -y ros-kinetic-husky*
 sudo apt-get install -y ros-kinetic-jackal*
+
+############## APT CLEANUP ##############
+sudo apt-get -y autoremove
 
 ############## SETUP ROS ENVIRONMENT ##############
 sudo mkdir -p /etc/ros
