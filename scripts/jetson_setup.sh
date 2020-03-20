@@ -35,6 +35,12 @@ sudo mkdir -p /etc/ros
 sudo wget -O /etc/profile.d/clearpath-ros-environment.sh https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/clearpath-ros-environment.sh
 sudo wget -O /etc/ros/setup.bash https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/setup.bash
 
+echo "source /opt/ros/kinetic/setup.bash" >> $HOME/.bashrc
+
+sudo rosdep init
+sudo wget https://raw.githubusercontent.com/clearpathrobotics/public-rosdistro/master/rosdep/50-clearpath.list -O /etc/ros/rosdep/sources.list.d/50-clearpath.list
+rosdep update
+
 ############## UDEV AND CONVENIENCE ##############
 wget -O /home/nvidia/.screenrc https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/.screenrc
 wget -O /home/nvidia/.vimrc https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/master/files/.vimrc
@@ -65,3 +71,4 @@ rm -rf ds4
 
 ############## BLUETOOTH ##############
 rfkill unblock bluetooth
+
