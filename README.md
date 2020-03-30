@@ -1,8 +1,13 @@
 # jetson_setup
-Simple script that makes all clearpath specific changes to a vanilla Jetson TX2 to make it operate like our robot standard images.  Makes it work as a standard computer for Husky or Jackal.
+Simple script that makes all clearpath specific changes to a vanilla Jetson to make it operate like our robot standard images.  Makes it work as a standard computer for Husky or Jackal.
+
+## Supported Jetsons
+* TX2 (Kinetic)
+* Nano (Melodic)
+* Xavier (Melodic)
 
 ## Usage
-```bash scripts/jetson_setup.sh```
+```bash scripts/<model>_setup.sh```
 
 ## What it Does
 * Add ROS sources and key
