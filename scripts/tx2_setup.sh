@@ -7,7 +7,7 @@ sudo add-apt-repository restricted
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y dist-upgrade
-sudo apt-get install -y nano bash-completion git
+sudo apt-get install -y nano bash-completion git apt-utils
 
 ############## ADD ROS MELODIC SOURCE ##############
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -23,11 +23,9 @@ sudo apt-get update
 
 ############## ROS ##############
 sudo apt-get install -y ros-melodic-desktop
+sudo apt-get install -y python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
 sudo apt-get install -y ros-melodic-husky*
 sudo apt-get install -y ros-melodic-jackal*
-
-############## APT CLEANUP ##############
-sudo apt-get -y autoremove
 
 ############## SETUP ROS ENVIRONMENT ##############
 sudo mkdir -p /etc/ros
@@ -57,4 +55,7 @@ wget https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/fi
 wget https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/files/JACKAL_SETUP.sh
 
 ############## BLUEZ ##############
-sudo apt-get install bluez bluez-tools
+sudo apt-get install -y bluez bluez-tools
+
+############## CLEANUP ##############
+sudo apt-get -y autoremove
