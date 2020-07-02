@@ -9,4 +9,4 @@ export ROBOT_SETUP=/etc/ros/setup.bash
 ######
 
 # Pass through to the main ROS workspace of the system.
-source /opt/ros/kinetic/setup.bash
+source /opt/ros/melodic/setup.bash
