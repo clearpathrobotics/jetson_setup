@@ -46,7 +46,8 @@ wget -O /home/nvidia/.vimrc https://raw.githubusercontent.com/clearpathrobotics/
 sudo wget -O /etc/udev/rules.d/10-microstrain.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/files/10-microstrain.rules
 sudo wget -O /etc/udev/rules.d/41-clearpath.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/files/41-clearpath.rules
 sudo wget -O /etc/udev/rules.d/41-hokuyo.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/files/41-hokuyo.rules
-sudo wget -O /etc/udev/rules.d/41-gamepad.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/files/41-gamepad.rules
+sudo wget -O /etc/udev/rules.d/41-gamepad.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/files/41-logitech.rules
+sudo wget -O /etc/udev/rules.d/41-gamepad.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/files/41-playstation.rules
 sudo wget -O /etc/udev/rules.d/52-ftdi.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/files/52-ftdi.rules
 sudo wget -O /etc/udev/rules.d/60-startech.rules https://raw.githubusercontent.com/clearpathrobotics/jetson_setup/melodic/files/60-startech.rules
 
